@@ -5,32 +5,8 @@
 			"name": "Flash",
 			"type": "fdb",
 			"request": "launch",
-			"program": "${workspaceRoot}/export/flash/bin/Utils-OpenFl-2.swf"
-		},
-		{
-			"name": "Flash (+rebuild)",
-			"type": "fdb",
-			"request": "launch",
-			"program": "${workspaceRoot}/export/flash/bin/Utils-OpenFl-2.swf",
-			"preLaunchTask": "flash debug (build only)"
-		},
-		{
-			"name": "Windows",
-			"type": "hxcpp",
-			"request": "launch",
-			"program": "${workspaceRoot}/export/windows/cpp/bin/Utils-OpenFl-2.exe"
-		},
-		{
-			"name": "Linux",
-			"type": "hxcpp",
-			"request": "launch",
-			"program": "${workspaceRoot}/export/linux64/cpp/bin/Utils-OpenFl-2"
-		},
-		{
-			"name": "Mac",
-			"type": "hxcpp",
-			"request": "launch",
-			"program": "${workspaceRoot}/export/mac64/cpp/bin/Utils-OpenFl-2.app/Contents/MacOS/Utils-OpenFl-2"
+			"program": "${workspaceRoot}/export/flash/bin/openfl-utils.swf",
+			"preLaunchTask": "debug: flash"
 		}
 	]
 }

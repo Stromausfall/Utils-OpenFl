@@ -27,7 +27,5 @@ class TestMain {
 
     public static function main() {
         executeTests();
-
-        openfl.system.System.exit(0);
     }
 }
