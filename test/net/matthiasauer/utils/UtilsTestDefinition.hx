@@ -9,6 +9,7 @@ import net.matthiasauer.utils.collections.CollectionsTest;
 import net.matthiasauer.utils.view.component.ComponentEnabledFlxSpriteTest;
 import net.matthiasauer.utils.view.component.mouseevent.click.FlxSpriteMouseClickEventEmitterComponentTest;
 import net.matthiasauer.utils.statemachine.StateMachineTest;
+import net.matthiasauer.utils.messageboard.MessageBoardTest;
 import net.matthiasauer.utils.misc.TypeUtilsTest;
 import haxe.unit.TestCase;
 
@@ -37,6 +38,9 @@ class UtilsTestDefinition implements TestDefinition {
 
             // StateMachine
             new StateMachineTest(),
+
+            // MessageBoard
+            new MessageBoardTest(),
 
             // Misc
             new TypeUtilsTest()
