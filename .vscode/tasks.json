@@ -10,9 +10,9 @@
 			}
 		},
 		{
-			"label": "debug: flash",
+			"label": "run unit tests (debug: neko)",
 			"command": "haxelib",
-			"args": ["run", "lime", "build", "flash", "-debug", "-Dfdb"],
+			"args": ["run", "lime", "test", "neko", "-debug", "-Dfdb"],
 			"problemMatcher": ["$haxe-absolute", "$haxe", "$haxe-error", "$haxe-trace"]
 		}
 	]

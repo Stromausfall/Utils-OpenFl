@@ -15,11 +15,10 @@ class MessageBoardImpl implements MessageBoard {
         return this.messages.get(topic);
     }
 
-    public function collectFor(topic:String) : List<Dynamic> {
+    public function collectFor<T>(topic:String, expectedMessage:Class<T>) : List<T> {        
         var messagesForTopic = internalCollectFor(topic);
 
-        // return a copy of the list
-        return messagesForTopic.filter(function(x) return true);
+        return messagesForTopic.map(function(message) return cast message);
     }
 
     public function store(topic:String, message:Dynamic) : Void {

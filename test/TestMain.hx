@@ -27,5 +27,9 @@ class TestMain {
 
     public static function main() {
         executeTests();
+        
+        #if neko
+        Sys.exit(0);
+        #end
     }
 }

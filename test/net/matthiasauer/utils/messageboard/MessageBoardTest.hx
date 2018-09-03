@@ -10,7 +10,7 @@ class MessageBoardTest extends TestCase {
         var messageBoard :MessageBoard = new MessageBoardImpl();
 
         // WHEN:
-        var messagesForNonExistentTopic:List<Dynamic> = messageBoard.collectFor("nonExistentTopic");
+        var messagesForNonExistentTopic:List<String> = messageBoard.collectFor("nonExistentTopic", String);
 
         // THEN:
         assertTrue(messagesForNonExistentTopic.length == 0);
@@ -27,8 +27,8 @@ class MessageBoardTest extends TestCase {
         messageBoard.store(topic, "3");
         messageBoard.store(topic, "4");
 
-        var retrievedMessages1:List<Dynamic> = messageBoard.collectFor(topic);
-        var retrievedMessages2:List<Dynamic> = messageBoard.collectFor(topic);
+        var retrievedMessages1:List<String> = messageBoard.collectFor(topic, String);
+        var retrievedMessages2:List<String> = messageBoard.collectFor(topic, String);
 
         // THEN:
         assertTrue(retrievedMessages1.length == 4);
@@ -57,12 +57,12 @@ class MessageBoardTest extends TestCase {
         messageBoard.store(topic, "4");
 
         // THEN:
-        assertEquals(4, messageBoard.collectFor(topic).length);
+        assertEquals(4, messageBoard.collectFor(topic, String).length);
 
         // WHEN:
         messageBoard.reset();
 
         // THEN:
-        assertEquals(0, messageBoard.collectFor(topic).length);
+        assertEquals(0, messageBoard.collectFor(topic, String).length);
     }
 }
